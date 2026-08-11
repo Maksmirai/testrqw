@@ -1,0 +1,69 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vkotk.Models"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+        WindowState="Maximized" WindowStartupLocation="CenterScreen"
+        MinHeight="1080" MinWidth="1920" FontFamily="Comic Sans MS"
+        MaxHeight="1080" MaxWidth="1920"
+        FontSize="18"   
+        x:Class="Vkotk.MainWindow"
+        Title="Vkotk"
+        >
+        <Grid ShowGridLines="True">
+             <Grid.RowDefinitions>
+                 <RowDefinition Height="*"></RowDefinition>
+                 <RowDefinition Height="3*"></RowDefinition>
+                 <RowDefinition Height="*"></RowDefinition>
+             </Grid.RowDefinitions>   
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+             <TextBox Grid.Column="1" BorderBrush="MediumBlue" BorderThickness="3"
+                      Name="TextBoxSearch" Watermark="Поиск" Height="40" KeyUp="TextBoxSearch_OnKeyUp"></TextBox>
+            <Grid Grid.Row="1" Grid.ColumnSpan="3" Margin="0 0 0 20"
+                  ColumnDefinitions="0.3*,*,0.7*,0.3*,0.8*,0.5*" ShowGridLines="False">
+                <TextBlock Text="id" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Название"></TextBlock>
+                <TextBlock Grid.Column="2"  HorizontalAlignment="Center" Text="Серийный номер"></TextBlock>
+                <TextBlock Grid.Column="3"  HorizontalAlignment="Center" Text="Количество"></TextBlock>
+                <TextBlock Grid.Column="4"  HorizontalAlignment="Center" Text="Вывод проверки"></TextBlock>
+                <TextBlock Grid.Column="5"  HorizontalAlignment="Center" Text="Дата проверки"></TextBlock>
+            </Grid>
+            <ListBox Grid.Row="1" Grid.ColumnSpan="3" Margin="0 30" Name="ListBoxData" Background="White" 
+                     BorderBrush="MediumBlue" BorderThickness="2" SelectionChanged="ListBoxData_OnSelectionChanged" SelectionMode="Toggle">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:Product">
+                        <Grid ColumnDefinitions="0.3*,*,0.7*,0.3*,0.8*,0.5*" ShowGridLines="False">
+                            <Border Grid.ColumnSpan="10" BorderBrush="MediumBlue" BorderThickness="2"></Border>
+
+                            
+                            <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Idproduct}"></TextBlock>
+                            <TextBlock Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Nameproduct}"></TextBlock>
+                            <TextBlock Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Codeproduct}"></TextBlock>
+                            <TextBlock Grid.Column="3" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Countproduct}"></TextBlock>
+                            <TextBlock Grid.Column="4" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Commentproduct}"></TextBlock>
+                            <TextBlock Grid.Column="5" TextWrapping="Wrap" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Text="{Binding Datecheck}"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="2" Grid.Row="2" Background="White" BorderBrush="MediumBlue"  
+                    Name="ButtonAddProduct" Content="Добавить новый продукт" Foreground="Black"
+                    BorderThickness="3" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Click="ButtonAddProduct_OnClick">
+            </Button>
+        </Grid>
+</Window>
