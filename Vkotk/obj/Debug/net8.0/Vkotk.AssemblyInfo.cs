@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vkotk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75e6f493e2fe749c38964055ce4c2287fa35b545")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vkotk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vkotk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

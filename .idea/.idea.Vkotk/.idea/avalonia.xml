@@ -5,6 +5,7 @@
       <map>
         <entry key="Vkotk/AddProductWindow.axaml" value="Vkotk/Vkotk.csproj" />
         <entry key="Vkotk/App.axaml" value="Vkotk/Vkotk.csproj" />
+        <entry key="Vkotk/Images.axaml" value="Vkotk/Vkotk.csproj" />
         <entry key="Vkotk/MainWindow.axaml" value="Vkotk/Vkotk.csproj" />
         <entry key="Vkotk/RedactProductWindow.axaml" value="Vkotk/Vkotk.csproj" />
       </map>

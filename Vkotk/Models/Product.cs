@@ -7,7 +7,7 @@ public partial class Product
 {
     public int Idproduct { get; set; }
 
-    public string Nameproduct { get; set; } = null!;
+    public string? Nameproduct { get; set; }
 
     public string? Codeproduct { get; set; }
 

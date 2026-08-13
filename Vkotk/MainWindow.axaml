@@ -11,7 +11,7 @@
         x:Class="Vkotk.MainWindow"
         Title="Vkotk"
         >
-        <Grid ShowGridLines="True">
+        <Grid ShowGridLines="False">
              <Grid.RowDefinitions>
                  <RowDefinition Height="*"></RowDefinition>
                  <RowDefinition Height="3*"></RowDefinition>
